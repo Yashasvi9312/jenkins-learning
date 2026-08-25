@@ -2,6 +2,15 @@ pipeline{
     agent any 
 
     stages{
+
+        stage('Dependency Checks'){
+            echo 'Checking node JS'
+
+            bat 'node -v'
+            bat 'npm -v'
+            bat 'where node'
+            bat 'where npm'
+        }
         
         stage('build'){
             steps{
