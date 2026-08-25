@@ -5,8 +5,10 @@ pipeline{
         
         stage('build'){
             steps{
-                echo 'Hello from Jenkins Pipeline!'
-                echo 'This is the Build stage.'
+                echo 'Starting build stage...'
+
+                bat 'echo Hello from Windows!'
+                bat 'dir'
             }
         }
 
