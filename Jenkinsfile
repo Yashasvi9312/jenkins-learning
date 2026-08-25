@@ -5,7 +5,7 @@ pipeline{
         
         stage('build'){
             steps{
-                echo 'Starting build stage...'
+                echo 'Starting build stage......'
 
                 bat 'echo Hello from Windows!'
                 bat 'dir'
