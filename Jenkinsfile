@@ -5,7 +5,7 @@ pipeline{
 
         stage('Dependency Checks'){
           steps{
-            echo 'Checking node JS'
+            echo 'Checking node JS...'
 
             bat 'node -v'
             bat 'npm -v'
