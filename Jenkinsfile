@@ -48,7 +48,19 @@ pipeline{
         nodejs 'node24'
     }
 
+
+    environment{
+        USERNAME = 'Yash2000'
+        PASSWORD = 'RandomShit12'
+    }
     stages{
+
+        stage('Variable Tests'){
+            steps{
+                bat 'echo "USERNAME : ${USERNAME}"'
+                bat 'echo "PASSWORD : ${PASSWORD}"'
+            }
+        }
         stage('Dependency checks'){
           steps{
             bat 'echo "Checking NodeJS"'
