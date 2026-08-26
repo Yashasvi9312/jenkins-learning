@@ -57,8 +57,8 @@ pipeline{
 
         stage('Variable Tests'){
             steps{
-                bat 'echo "USERNAME : ${USERNAME}"'
-                bat 'echo "PASSWORD : ${PASSWORD}"'
+                bat 'echo "USERNAME : %USERNAME%"'
+                bat 'echo "PASSWORD : %PASSWORD%"'
             }
         }
         stage('Dependency checks'){
