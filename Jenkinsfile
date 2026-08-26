@@ -50,7 +50,7 @@ pipeline{
 
     stages{
         stage('Dependency checks'){
-          step{
+          steps{
             bat 'echo "Checking NodeJS"'
             bat 'node -v'
             bat 'npm -v'
@@ -58,7 +58,7 @@ pipeline{
         }
 
         stage('Dependency Installation'){
-            step{
+            steps{
                 bat 'echo "Installing node dependencies"'
                 bat 'npm install'
             }
