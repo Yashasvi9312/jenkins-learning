@@ -12,6 +12,14 @@ pipeline{
         PASSWORD = 'RandomShit12'
         SECRET_TEXT = credentials('demo-secret')
     }
+
+    parameters {
+        choice(
+            name: 'ENVIRONMENT',
+            choices: ['development', 'staging', 'production'],
+            description: 'Select deployment environment'
+        )
+    }
     stages{
 
         stage('Variable Tests'){
