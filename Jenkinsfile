@@ -60,7 +60,7 @@ pipeline{
             steps{
                 bat 'echo "USERNAME : %USERNAME%"'
                 bat 'echo "PASSWORD : %PASSWORD%"'
-                echo 'SECRET_TEXT ${SECRET_TEXT} : %SECRET_TEXT%'
+                echo "SECRET_TEXT ${SECRET_TEXT}"
             }
         }
         stage('Dependency checks'){
