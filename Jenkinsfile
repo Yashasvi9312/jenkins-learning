@@ -76,6 +76,12 @@ pipeline{
                 bat 'echo "Installing node dependencies"'
                 bat 'npm install'
             }
+
+            post{
+                success{
+                    echo "npm install was successfull"
+                }
+            }
         }
 
         stage('Build') {
@@ -96,6 +102,15 @@ pipeline{
             steps {
                 echo 'Deploying application...'
             }
+        }
+    }
+
+    post{
+        success{
+            echo "Post Success..."
+        }
+        always{
+            echo "Post always....."
         }
     }
 }
