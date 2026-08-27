@@ -18,12 +18,11 @@ pipeline{
             steps{
                 bat 'echo "USERNAME : %USERNAME%"'
                 bat 'echo "PASSWORD : %PASSWORD%"'
-                echo "SECRET_TEXT ${SECRET_TEXT}"
             }
         }
         stage('Dependency checks'){
             when {
-                branch main
+                branch 'main'
             }
           steps{
             bat 'echo "Checking NodeJS"'
@@ -54,7 +53,7 @@ pipeline{
 
         stage('Test') {
             when {
-                branch test
+                branch 'test'
             }
             steps {
                 echo 'Running tests...'
