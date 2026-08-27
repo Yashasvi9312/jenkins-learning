@@ -52,6 +52,7 @@ pipeline{
     environment{
         USERNAME = 'Yash2000'
         PASSWORD = 'RandomShit12'
+        SECRET_TEXT = credentials('demo-secret')
     }
     stages{
 
@@ -59,6 +60,7 @@ pipeline{
             steps{
                 bat 'echo "USERNAME : %USERNAME%"'
                 bat 'echo "PASSWORD : %PASSWORD%"'
+                echo 'SECRET_TEXT ${SECRET_TEXT} : %SECRET_TEXT%'
             }
         }
         stage('Dependency checks'){
